@@ -5,17 +5,17 @@ This project models how signed networks evolve toward structural balance using a
 
 ---
 
-### 📐 Custom Order Parameters: `q` and `p`
+###  Custom Order Parameters: `q` and `p`
 
 To characterize the state of the network during simulation, we define two custom **statistical order parameters**:
 
-#### 🔹 `p` — Mean Link Strength
+####  `p` — Mean Link Strength
 - Measures the average of all signed edges, normalized by the total magnitude of links.
 - Indicates the **overall tendency** of the network:  
   - Positive `p`: cooperative or synchronized structure  
   - Negative `p`: conflictual or anti-correlated structure
 
-#### 🔹 `q` — Two-Star Structural Order Parameter
+####  `q` — Two-Star Structural Order Parameter
 - Captures how aligned two-step paths are in the network (i.e., j → i → k).
 - Reflects **structural balance** or **frustration** in indirect interactions:
   - High `q`: coherent indirect influence  
@@ -25,7 +25,7 @@ These parameters help summarize the **macroscopic organization** of the network 
 
 ---
 
-### 🧪 Simulation Overview
+###  Simulation Overview
 
 The core function `balance_model()` performs the simulation:
 
@@ -40,7 +40,7 @@ At each temperature, the simulation tracks:
 
 ---
 
-### 📤 Output
+###  Output
 
 The function returns:
 
@@ -52,7 +52,7 @@ The function returns:
 
 ---
 
-### 📦 Project Structure
+###  Project Structure
 
 ```bash
 ├── balance_model.py        # Monte Carlo simulation
