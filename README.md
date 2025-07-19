@@ -52,11 +52,35 @@ The function returns:
 
 ---
 
-###  Project Structure
+###  Custom Statistical Order Parameters: q and p
 
-```bash
-├── balance_model.py        # Monte Carlo simulation
-├── order_parameters.py     # q_func() and mean_of_links()
-├── triangle_analysis.py    # Triangle-based balance classification
-├── main_simulation.py      # Example script to run all components
-├── README.md               # You are here!
+This simulation framework defines two custom **order parameters** — `q` and `p` — to summarize the structural and statistical properties of signed networks.
+
+####  `p` — Mean Link Strength
+The `mean_of_links()` function calculates `p`, defined as:
+
+> The sum of all signed edge values, normalized by the total edge magnitudes.
+
+It captures the **average tendency of interactions**:
+- Positive `p` → more cooperative or correlated network
+- Negative `p` → more conflictual or anti-correlated network
+
+####  `q` — Two-Star Structural Measure
+The `q_func()` function defines `q` as:
+
+> The normalized sum over all two-star motifs (`i ← j → k`), reflecting alignment of indirect paths.
+
+This metric captures **global structural alignment** in the network and serves as an indicator of **imbalance or frustration**.
+
+####  Why These Parameters?
+Both `q` and `p` are treated as **statistical order parameters**, inspired by concepts in statistical mechanics and complex systems.
+- each link is important ; p
+- each link in a triangle depends on  the two other links so the q or two star parameter is important too! ;q
+- Dynamical behavior during Monte Carlo simulations
+
+
+
+
+
+
+
